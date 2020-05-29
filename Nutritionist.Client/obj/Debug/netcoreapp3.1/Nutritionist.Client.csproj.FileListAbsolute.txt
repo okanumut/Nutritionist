@@ -1,0 +1,8 @@
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\bin\Debug\netcoreapp3.1\Nutritionist.Client.deps.json
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\bin\Debug\netcoreapp3.1\Nutritionist.Client.dll
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\obj\Debug\netcoreapp3.1\Nutritionist.Client.csprojAssemblyReference.cache
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\obj\Debug\netcoreapp3.1\Nutritionist.Client.AssemblyInfoInputs.cache
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\obj\Debug\netcoreapp3.1\Nutritionist.Client.AssemblyInfo.cs
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\bin\Debug\netcoreapp3.1\Nutritionist.Client.pdb
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\obj\Debug\netcoreapp3.1\Nutritionist.Client.dll
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Client\obj\Debug\netcoreapp3.1\Nutritionist.Client.pdb

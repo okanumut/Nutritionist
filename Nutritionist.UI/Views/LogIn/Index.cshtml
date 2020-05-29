@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/template/js/vendor/jquery-1.12.4.min.js"></script>
+<br />
+<br />
+<br />
+<br />
+<br />
+<form>
+    <br />
+    <input class="form-control form-control-lg" id="email" type="text" placeholder="E mail"><br />
+    <input class="form-control form-control-lg" id="password" type="text" placeholder="Şifre"><br />
+
+
+    <button id="btnLogin">Giriş Yap</button>
+</form>
+<script src="~/js/Util/Util.js"></script>
+<script>
+    $("#btnLogin").click(function () {
+        var data = {
+            "Email": $("#email").val(),
+            "Password": $("#password").val(),
+        }
+
+        Util.Ajax.Generic("giris-yap", data, "POST", "json", false, null, success, null, null);
+         
+        function success(status) {
+            if (status.operation == "Success") {
+                window.location.href = "anasayfa";
+            }
+        }
+
+    });
+</script>
+

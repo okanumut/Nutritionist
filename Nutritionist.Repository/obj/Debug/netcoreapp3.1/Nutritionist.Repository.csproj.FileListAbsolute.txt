@@ -1,0 +1,11 @@
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\bin\Debug\netcoreapp3.1\Nutritionist.Repository.deps.json
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\bin\Debug\netcoreapp3.1\Nutritionist.Repository.dll
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\bin\Debug\netcoreapp3.1\Nutritionist.Repository.pdb
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\bin\Debug\netcoreapp3.1\Nutritionist.Entity.dll
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\bin\Debug\netcoreapp3.1\Nutritionist.Entity.pdb
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\obj\Debug\netcoreapp3.1\Nutritionist.Repository.csprojAssemblyReference.cache
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\obj\Debug\netcoreapp3.1\Nutritionist.Repository.AssemblyInfoInputs.cache
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\obj\Debug\netcoreapp3.1\Nutritionist.Repository.AssemblyInfo.cs
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\obj\Debug\netcoreapp3.1\Nutritionist.Repository.csproj.CopyComplete
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\obj\Debug\netcoreapp3.1\Nutritionist.Repository.dll
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Repository\obj\Debug\netcoreapp3.1\Nutritionist.Repository.pdb

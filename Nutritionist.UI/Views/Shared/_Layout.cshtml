@@ -1,0 +1,285 @@
+﻿@using Microsoft.Extensions.Caching.Memory;
+@using Nutritionist.Client;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Nutritionist.UI</title>
+
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/template/images/favicon.ico">
+
+    <!-- Google Fonts
+    ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- All css files are included here
+    ============================================ -->
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/css/bootstrap.min.css">
+
+    <!-- This core.css file contents all plugins css file
+    ============================================ -->
+    <!-- Nice select css
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/css/nice-select.css">
+    <!-- This core.css file contents all plugins css file
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/css/core.css">
+
+    <!-- Theme shortcodes/elements style
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/css/shortcode/shortcodes.css">
+
+    <!--  Theme main style
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/style.css">
+
+    <!-- Color CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/css/plugins/color.css">
+
+    <!-- Responsive CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/template/css/responsive.css">
+
+    <!-- Modernizr JS -->
+    <script src="~/template/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+<body>
+    <!--Header Area Start-->
+    <header id="sticky-header" class="header-area">
+        <!-- Header Top Start -->
+        <div class="header-top">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="header-top-list">
+                        <ul class="top-contact-list">
+                            <li><a href="#">Call Us: 011 222 3333</a></li>
+                            <li><a href="#">Email: youremail@example.com</a></li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-rss"></i></a>
+                            <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
+                            <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="logo"><a href="index.html"><img src="~/template/images/logo/logo.png" alt="JobHere"></a></div>
+                </div>
+                <div class="col-sm-6 col-lg-9">
+                    <div class="pull-right header-menu">
+                        <nav id="primary-menu">
+                            <ul class="main-menu text-right">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                    <ul class="dropdown">
+                                        <li><a href="index.html">Home Version One</a></li>
+                                        <li><a href="index-2.html">Home Version Two</a></li>
+                                        <li><a href="index-3.html">Home Box Layout</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="job-board.html">Jobs</a>
+                                    <ul class="dropdown">
+                                        <li><a href="single-job-post.html">Single Job</a></li>
+                                        <li><a href="job-details.html">Job Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li>
+                                    <a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="job-board.html">Job Board</a></li>
+                                        <li><a href="single-job-post.html">Single Job</a></li>
+                                        <li><a href="job-details.html">Job Details</a></li>
+                                        <li><a href="candidates.html">Candidates</a></li>
+                                        <li><a href="resume.html">Resume</a></li>
+                                        <li><a href="blog.html">Blog Page</a></li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                    <ul class="dropdown">
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+
+                        @if (Settings.cache.Get("UserName") == null)
+                        {
+                            <div class="login-btn">
+                                <a class="modal-view button" href="kayit">Kayıt Ol</a>
+                                <a class="modal-view button" href="giris">Giriş Yap</a>
+                            </div>
+                        }
+                        else
+                        {
+                            <divclass ="login-btn">
+                                <a class="modal-view button">@Settings.cache.Get("UserName")</a>
+                            </divclass>
+                        }
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Area start -->
+        <div class="mobile-menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="mobile-menu">
+                            <nav id="dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">HOME</a>
+                                        <ul>
+                                            <li><a href="index.html">Home Version One</a></li>
+                                            <li><a href="index-2.html">Home Version Two</a></li>
+                                            <li><a href="index-3.html">Home Box Layout</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="job-board.html">Job</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="single-job-post.html">Single Job</a></li>
+                                            <li><a href="job-details.html">Job Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li>
+                                        <a href="#">Page</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="job-board.html">Job Board</a></li>
+                                            <li><a href="single-job-post.html">Single Job</a></li>
+                                            <li><a href="job-details.html">Job Details</a></li>
+                                            <li><a href="candidates.html">Candidates</a></li>
+                                            <li><a href="resume.html">Resume</a></li>
+                                            <li><a href="blog.html">Blog Page</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">Blog</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Area end -->
+    </header>
+    <!-- End of Header Area -->
+
+
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+
+    <!--Start of Footer Widget-area-->
+    <footer class="footer-area">
+        <!-- Start of Footer area -->
+        <div class="copyright-area text-center ptb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-text">
+                            <span class="text-white block"> Copyright&copy; <a href="#">Jobhere</a>.All right reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer area -->
+
+
+
+
+
+    <script src="~/template/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap framework js
+    ========================================================= -->
+    <script src="~/template/js/bootstrap.min.js"></script>
+    <script src="~/template/js/popper.js"></script>
+
+    <!-- Owl Carousel js
+    ========================================================= -->
+    <script src="~/template/js/owl.carousel.min.js"></script>
+
+    <!-- Jquery nice select js
+    ========================================================= -->
+    <script src="~/template/js/jquery.nice-select.min.js"></script>
+
+    <!-- nivo slider js
+    ========================================================= -->
+    <script src="~/template/lib/nivo-slider/js/jquery.nivo.slider.js"></script>
+    <script src="~/template/lib/nivo-slider/home.js"></script>
+
+    <!-- Js plugins included in this file
+    ========================================================= -->
+    <script src="~/template/js/plugins.js"></script>
+
+    <!-- Video Player JS
+    ========================================================= -->
+    <script src="~/template/js/jquery.mb.YTPlayer.js"></script>
+
+    <!-- AJax Mail JS
+    ========================================================= -->
+    <script src="~/template/js/ajax-mail.js"></script>
+
+    <!-- Mail Chimp JS
+    ========================================================= -->
+    <script src="~/template/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Waypoint Js
+    ========================================================= -->
+    <script src="~/template/js/waypoints.min.js"></script>
+
+    <!-- Main js file contents all jQuery plugins activation
+    ========================================================= -->
+    <script src="~/template/js/main.js"></script>
+</body>
+</html>

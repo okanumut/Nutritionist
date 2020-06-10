@@ -1,30 +1,390 @@
-﻿@{
+﻿@model List<ProductModel>
+@using Nutritionist.Client
+@using Microsoft.Extensions.Caching.Memory
+@{
     ViewData["Title"] = "Home Page";
+    var data = Settings.cache.Get("UserName").ToString();
 }
 
- 
-<!--Testimonial Area Start-->
-<div class="testimonial-area bg-2 text-center fix ptb-100 ptb-sm-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 ml-auto mr-auto">
-                <div class="section-title text-white">
-                    <h2>Client Say</h2>
-                    <p>Lorem ipsum dolor sit amet, contetur adipisil elit sed do</p>
-                </div>
-                <div class="testimonial-carousel carousel-style-one">
-                    <div class="single-testimonial">
-                        <div class="testimonial-text pt-46">
-                            <p class="text-white p-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem incidi ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru exercitation ullamco laboris nisi ut aliquip</p>
-                        </div>
-                        <div class="testimonial-info">
-                            <span class="testimonial-name text-white">Kevin Roberts</span>
-                        </div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+
+
+    .modal-confirm {
+        color: #434e65;
+        width: 525px;
+    }
+
+        .modal-confirm .modal-content {
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .modal-confirm .modal-header {
+            background: #47c9a2;
+            border-bottom: none;
+            position: relative;
+            text-align: center;
+            margin: -20px -20px 0;
+            border-radius: 5px 5px 0 0;
+            padding: 35px;
+        }
+
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .modal-confirm .form-control, .modal-confirm .btn {
+            min-height: 40px;
+            border-radius: 3px;
+        }
+
+        .modal-confirm .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            text-shadow: none;
+            opacity: 0.5;
+        }
+
+            .modal-confirm .close:hover {
+                opacity: 0.8;
+            }
+
+        .modal-confirm .icon-box {
+            color: #fff;
+            width: 95px;
+            height: 95px;
+            display: inline-block;
+            border-radius: 50%;
+            z-index: 9;
+            border: 5px solid #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+            .modal-confirm .icon-box i {
+                font-size: 64px;
+                margin: -4px 0 0 -4px;
+            }
+
+        .modal-confirm.modal-dialog {
+            margin-top: 80px;
+        }
+
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: #eeb711;
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border-radius: 30px;
+            margin-top: 10px;
+            padding: 6px 20px;
+            border: none;
+        }
+
+            .modal-confirm .btn:hover, .modal-confirm .btn:focus {
+                background: #eda645;
+                outline: none;
+            }
+
+            .modal-confirm .btn span {
+                margin: 1px 3px 0;
+                float: left;
+            }
+
+            .modal-confirm .btn i {
+                margin-left: 1px;
+                font-size: 20px;
+                float: right;
+            }
+
+    .trigger-btn {
+        display: inline-block;
+        margin: 100px auto;
+    }
+</style>
+
+
+<!-- BEGIN #central_content -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ödeme İşlemi</h4>
+            </div>
+            <div class="modal-body">
+                <p>Diyet Listesini Yöntem İle Alacaksınız ? </p>
+
+                <p>
+                    <input type="radio" name="radio1" onclick="Show_Div('#Div_1')" class="cb1">Kredi Kartı
+                </p>
+
+
+                <div id="Div_1" style="display: none;">
+                    <div class="form-group">
+                        <input name="AccountNo" id="cardNo" placeholder="Card Number" title="Card Number" class="form-control" onfocus="showCardValue()" onblur="hideCardValue(this.value)" onkeypress="formatCardNumber(event, this); limit(event, this, 19) " onpaste="return false" oncut="return false" tabindex="2" autocomplete="nope" type="text">
+                        <span class="placeholder-text" style="display: none;">Please enter Card Number</span>
+                        <input name="cardNoSafe" id="cardNoSafe" value="" style="display:none;">
                     </div>
                 </div>
+
+
+                <p>
+                    <input type="radio" name="radio1" onclick="Show_Div('#Div_2')" class="cb1">Havale/Eft
+                </p>
+                <div id="Div_1" style="display: none;">
+                    Kredi Kartı Alanı
+                </div>
+                <br />
+                <br />
+
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#SuccesModal">Ödemeyi Yap</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal HTML -->
+<div id="SuccesModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="icon-box">
+                    <i class="material-icons">&#xE876;</i>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <h4>Başarılı!</h4>
+                <button class="btn btn-success" data-dismiss="modal" onclick="location.href='anasayfa'"><span>Kapat ve Anasayfaya Dön</span> <i class="material-icons">&#xE5C8;</i></button>
             </div>
         </div>
     </div>
 </div>
-<!--End of Testimonial Area-->
- 
+
+
+
+<div id="central_content">
+
+    <!-- BEGIN central slogan and rss feed -->
+    <br />
+    <br /><br />
+    <br />
+    <div class="question1 ha">ÜRÜNLER</div>
+    <div style="clear:both;"></div>
+    <br />
+    <br />
+    <!-- END central slogan and rss feed -->
+    <!-- BEGIN central products -->
+    <!-- Modal -->
+
+
+
+    @foreach (var item in Model)
+    {
+        <div class="central_products">
+            <div hidden>
+                <input id="inputID" value="@Settings.cache.Set(item._id.ToString(), item._id);" />
+            </div>
+
+            <!-- BEGIN product1 -->
+            <div class="item">
+                <div class="item_up">
+                    <a href="product-page.html" class="ptitle2 product_title1">@item.Name</a>
+                    <br />
+                    <div class="ptitle2 product_title2">@item.Author</div>
+                    <br />
+                     
+
+                    <div class="product_text">
+                        @item.Meal
+                    </div>
+                    <div class="price">@item.Detail</div>
+                </div>
+
+
+                @if (data == "admin")
+                {
+                    <a href="#" data-id='@item._id' id='ProductDeleteSelect_@(item._id)' class="delete-link">Ürünü Sil</a>
+                }
+
+
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Hemen Satın Al</button>
+                <br />
+                <br />
+                <br />
+
+                <a href="#" data-id='@item._id' id='ProductSelect_@(item._id)' class="select-link">Sepete Ekle</a>
+
+                <!-- END product1 -->
+            </div>
+
+            <!-- END central products -->
+        </div>
+
+    }
+
+
+
+
+<script src="~/js/Util/Util.js"></script> 
+
+    <script>
+        $('.select-link').click(function () {
+            var id = $(this).attr('data-id');
+
+            var data = {
+                "ID": id,
+            };
+
+            Util.Ajax.Generic("add-basket", data, "POST", "json", false, null, success, null, null);
+
+
+            function success(status) {
+                if (status.operation == "Success") {
+                    window.location.href = "basket";
+                } else if (status.operation == "Wrong") {
+                    // $("#span").append("Hatalı Giriş");
+                }
+            }
+
+        });
+    </script>
+
+
+
+    <script>
+        $('.delete-link').click(function () {
+            var id = $(this).attr('data-id');
+
+            var data = {
+                "ID": id,
+            };
+
+            Util.Ajax.Generic("deleteProduct", data, "POST", "json", false, null, success, null, null);
+
+
+            function success(status) {
+                if (status.operation == "Success") {
+                    window.location.href = "anasayfa";
+                } else if (status.operation == "Wrong") {
+                    // $("#span").append("Hatalı Giriş");
+                }
+            }
+
+        });
+    </script>
+
+
+
+
+
+
+
+    <script>
+        function Show_Div(Div_id, element) {
+            $("input[name='radio1']").not(element).parent().next('div').hide(250);
+            if (!$(Div_id).is(':visible')) {
+                $(Div_id).prev().children().prop('checked', true);
+                $(Div_id).show(250);
+            } else {
+                $(Div_id).prev().children().prop('checked', false);
+                $(Div_id).hide(250);
+            }
+        }
+
+
+
+        function formatCardNumber(event, element) {
+            if (isNaN(event.key) && !isAllowedKey(event)) {
+                event.preventDefault();
+            } else {
+                if (event.keyCode != 8) {
+                    if (element.value.length > 14) {
+                        var position = element.selectionStart;
+                        element.value = element.value.replace(/\W/gi, '').replace(/^(.{4})(.{4})(.{4})(.*)$/, "$1 $2 $3 $4");
+                        if (element.value.length != 19) {
+                            element.setSelectionRange(position, position);
+                        }
+                    }
+                    else {
+                        element.value = element.value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+                    }
+                }
+            }
+        }
+
+        function isAllowedKey(event) {
+            var allowed = false;
+            if (event.keyCode === 8 || event.keyCode === 9 || event.keyCode === 37 || event.keyCode === 39) {
+                allowed = true;
+            }
+            return allowed;
+        }
+
+        function limit(event, element, max_chars) {
+            if (isTextSelected(element)) {																		//
+                max_chars += 1;
+            }
+            if (element.value.length >= max_chars && !isAllowedKey(event)) {
+                event.preventDefault();
+            }
+        }
+
+        function showCardValue() {
+            document.getElementById("cardNo").value = document.getElementById("cardNoSafe").value;
+        }
+
+        function isTextSelected(input) {
+            var startPosition = input.selectionStart;
+            var endPosition = input.selectionEnd;
+
+            var selObj = document.getSelection();
+            var selectedText = selObj.toString();
+
+            if (selectedText.length != 0) {
+                input.focus();
+                input.setSelectionRange(startPosition, endPosition);
+                return true;
+            } else if (input.value.substring(startPosition, endPosition).length != 0) {
+                input.focus();
+                input.setSelectionRange(startPosition, endPosition);
+                return true;
+            }
+            return false;
+        }
+
+        function hideCardValue(val) {
+            document.getElementById("cardNoSafe").value = val;
+            var len = val.length;
+            if (len >= 14) {
+                const regex = /\d{4}(?= \d{1})/g;
+                const substr = "****";
+                document.getElementById("cardNo").value = val.replace(regex, substr);
+            }
+        }
+    </script>
+
+
+
+</div>

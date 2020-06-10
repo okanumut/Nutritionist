@@ -17,7 +17,10 @@ namespace Nutritionist.Entity.Concrete
         public string _id { get; set; } = ObjectId.GenerateNewId().ToString();
         [StringLength(20)]
         public string UserName { get; set; }
+        [StringLength(250)]
         public string Email { get; set; }
+        [StringLength(250)]
         public string Password { get; set; }
+        public string UserType { get; set; }
     }
 }

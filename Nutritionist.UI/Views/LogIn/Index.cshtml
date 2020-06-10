@@ -3,37 +3,115 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .multipleChosen, .multipleSelect2 {
+        width: 300px;
+    }
+</style>
+<div class="login_left">
+    <div class="loginlogo"></div>
+    <div class="question1 ha" style="margin-top:5px;">Members</div>
+    <div class="question2 ha" style="margin-top:5px;">Login</div>
+    <div class="login_text">Lorem Ipsum is simply dummy text of the printing and <b>typesetting</b> industry. Lorem Ipsum has.</div>
 
-<script src="~/template/js/vendor/jquery-1.12.4.min.js"></script>
-<br />
-<br />
-<br />
-<br />
-<br />
-<form>
+    <div>
+        <input type="text" id="UserNameLog" value="Username" onfocus="if(this.value=='Username')this.value=''" onblur="if(this.value=='')this.value='Username'" class="login_name" />
+        <br />
+        <input type="text" id="PasswordLog" value="******" onfocus="if(this.value=='******')this.value=''" onblur="if(this.value=='')this.value='******'" class="login_password" />
+        <input value="Go »" id="btnLogin" class="go" type="submit" />
+    </div>
+
+
+
+    <div style="clear:both;"></div>
+    <div class="italicblue"><span id="span" style="color: red;font-size: large;"></span></div>
     <br />
-    <input class="form-control form-control-lg" id="email" type="text" placeholder="E mail"><br />
-    <input class="form-control form-control-lg" id="password" type="text" placeholder="Şifre"><br />
+    <br />
+    <br />
+
+    <div style="clear:both;"></div>
+    <div class="hbar">-</div>
+    <div class="italicblue"><a href="#">Forgot Password?</a></div>
+    <div style="clear:both;"></div>
+    <div class="hbar">-</div>
+    <div class="italicblue"><a href="#">Forgot Username?</a></div>
+</div>
 
 
-    <button id="btnLogin">Giriş Yap</button>
-</form>
-<script src="~/js/Util/Util.js"></script>
-<script>
-    $("#btnLogin").click(function () {
-        var data = {
-            "Email": $("#email").val(),
-            "Password": $("#password").val(),
-        }
 
-        Util.Ajax.Generic("giris-yap", data, "POST", "json", false, null, success, null, null);
-         
-        function success(status) {
-            if (status.operation == "Success") {
-                window.location.href = "anasayfa";
+
+<div class="login_right">
+    <div class="registerlogo"></div>
+    <div class="question1 ha" style="margin-top:5px;">Kayıt Ol</div>
+    <div class="question2 ha" style="margin-top:5px;">Şimdi</div>
+
+    <div>
+        <input type="text" id="UserName" value="Username" onfocus="if(this.value=='Username')this.value=''" onblur="if(this.value=='')this.value='Username'" class="register_name" />
+        <br />
+        <input type="text" id="Password" value="Password" onfocus="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'" class="register_password" />
+        <br />
+        <input type="text" id="Email" value="Em@il" onfocus="if(this.value=='Em@il')this.value=''" onblur="if(this.value=='')this.value='Em@il'" class="register_password" />
+        <br />
+        <div class="custom-select"  style="width:200px;">
+            <select id="UserType">
+                <option value="0">Select Member Type:</option>
+                <option value="1">User</option>
+                <option value="2">Nutritionist</option>
+            </select>
+        </div>
+        <br />
+        <input value="Register" id="btnRegister" class="register_account" type="submit" />
+
+    </div>
+
+
+    <div class="checkbox">
+        <input type="checkbox" id="cb" name="box" />
+    </div>
+    <div class="cbtext">Do you advice lorem?</div>
+    <div class="cbtextsmall">You should read <a href="#">equired</a> pisum lotus</div>
+    <script src="~/js/Util/Util.js"></script>
+    <script>
+        $("#btnRegister").click(function () {
+
+            var data = {
+                "UserName": $("#UserName").val(),
+                "Password": $("#Password").val(),
+                "Email": $("#Email").val(),
+                "UserType": $("#UserType").val(),
+            };
+
+            Util.Ajax.Generic("log", data, "POST", "json", false, null, success, null, null);
+
+
+
+            function success(status) {
+                var asd = 0;
             }
-        }
 
-    });
-</script>
+        });
+    </script>
+
+    <script>
+        $("#btnLogin").click(function () {
+
+            var data = {
+                "UserNameLog": $("#UserNameLog").val(),
+                "PasswordLog": $("#PasswordLog").val()
+            };
+            //logg
+
+
+            Util.Ajax.Generic("logg", data, "POST", "json", false, null, success, null, null);
+
+            function success(status) {
+                if (status.operation == "Success") {
+                    window.location.href = "anasayfa";
+                } else if (status.operation == "Wrong") {
+                    $("#span").append("Hatalı Giriş");
+                }
+            }
+        });
+    </script>
+</div>
 

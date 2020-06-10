@@ -12,6 +12,8 @@ namespace Nutritionist.Repository.UnitOfWork
     {
         private bool disposed = false;
         public ILoginUsers LoginUsers { get; } 
+        public IList List { get; } 
+        public IBaskets Baskets { get; } 
 
         private readonly IMongoContext _mongoContext;
 
@@ -21,6 +23,8 @@ namespace Nutritionist.Repository.UnitOfWork
             {
                 _mongoContext = new MongoContext();
                 LoginUsers = new LoginUsersMongoRepository(_mongoContext);
+                List = new ListMongoRepository(_mongoContext);
+                Baskets = new BasketsMongoRepository(_mongoContext);
             }
             else
             {

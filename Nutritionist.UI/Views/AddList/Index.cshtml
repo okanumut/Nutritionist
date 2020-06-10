@@ -1,0 +1,76 @@
+﻿@using Microsoft.Extensions.Caching.Memory;
+@using Nutritionist.Client;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="central_content">
+
+    <!-- BEGIN central slogan and rss feed -->
+    <div class="question1 ha">Check Out</div>
+    <div class="question2 ha">Full Elements</div>
+    <div style="clear:both;"></div>
+    <div class="here">You are here:</div>
+    <div class="product_directory"><a href="#">Home</a></div>
+    <div class="product_directory arrows">»</div>
+    <div class="product_directory blue"><a href="#">Check out</a></div>
+
+    <!-- END central slogan and rss feed -->
+    <!-- START #central_content-->
+    <div style="clear:both;  padding:0 0 24px 0; margin:0; line-height:24px;"></div>
+
+    <form action="#">
+        <div class="form_left">
+            <div class="check_label">Name :*</div>
+            <input type="text" class="check_input" name="Name" id="Name" />
+
+            <div class="check_label">Author :*</div>
+            <input type="text" class="check_input" name="Author" id="Author" /> 
+
+
+
+        </div>
+        <div class="form_right">
+            <div class="check_label">Öğün :*</div>
+            <input type="text" class="check_input" name="Meal" id="Meal" />
+
+            <div class="check_label">Detay:*</div>
+            <input type="text" class="check_input" name="Detay" id="Detail" />
+        </div>
+    </form>
+
+    <div id="addProduct" class="checkout_button" style="margin-top:28px; margin-bottom:10px;"><a href="#"><img class="checkout_icon" src="~/template/styles/Images/check.png" alt="check" />Ürün Ekle</a></div>
+
+    <!-- END #central_content-->
+</div>
+
+ 
+<script src="~/js/Util/Util.js"></script>
+
+<script>
+    $("#addProduct").click(function () {
+
+        var data = {
+            "Name": $("#Name").val(),
+            "Author": $("#Author").val(),
+            "Meal": $("#Meal").val(),
+            "Detail": $("#Detail").val(),
+        };
+        //logg
+
+
+        Util.Ajax.Generic("product", data, "POST", "json", false, null, success, null, null);
+
+
+        function success(status) {
+            if (status.operation == "Success") {
+                window.location.href = "anasayfa";
+            } else if (status.operation == "Wrong") {
+                // $("#span").append("Hatalı Giriş");
+            }
+        }
+    });
+</script>
+

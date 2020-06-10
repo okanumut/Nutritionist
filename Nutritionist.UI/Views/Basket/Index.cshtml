@@ -1,0 +1,13 @@
+﻿@model List<BasketModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SEPETİM</h1>
+@foreach (var item in Model)
+{
+
+    <h5> Diyet Adı : @item.Name     ->>>    </h5>
+
+}

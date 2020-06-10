@@ -10,6 +10,8 @@ namespace Nutritionist.Repository.UnitOfWork
         object Entity<T>();
 
         ILoginUsers LoginUsers { get; } 
+        IList List { get; } 
+        IBaskets Baskets { get; } 
 
         int Save();
     }

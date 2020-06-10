@@ -78,11 +78,23 @@ namespace Nutritionist.UI
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute("anasayfa", "anasayfa", new { controller = "Home", action = "Index" }); 
-                routes.MapRoute("kayit", "kayit", new { controller = "Register", action = "Register" }); 
-                routes.MapRoute("kayitOl", "kayit-ol", new { controller = "Register", action = "RegisterPage" }); 
-                routes.MapRoute("giris", "giris", new { controller = "LogIn", action = "Index" }); 
-                routes.MapRoute("girisYap", "giris-yap", new { controller = "LogIn", action = "Login" }); 
+                routes.MapRoute("start", "", new { controller = "Start", action = "Index" }); 
+                routes.MapRoute("anasayfa", "anasayfa", new { controller = "Home", action = "Index" });
+
+                routes.MapRoute("login", "login", new { controller = "Login", action = "Index" });
+
+                routes.MapRoute("log", "log", new { controller = "Login", action = "Login" }); //Register
+                routes.MapRoute("logg", "logg", new { controller = "Login", action = "ReallyLogin" }); //Logina
+
+                routes.MapRoute("LogOut", "exit", new { controller = "LogOut", action = "LogOut" }); //
+
+
+                routes.MapRoute("addProduct", "add-product", new { controller = "AddList", action = "Index" }); //Add Product
+                routes.MapRoute("Product", "product", new { controller = "AddList", action = "AddProduct" }); //Add Product
+                routes.MapRoute("DeleteProduct", "deleteProduct", new { controller = "AddList", action = "DeleteProduct" }); //Add Product
+
+                routes.MapRoute("Basket", "basket", new { controller = "Basket", action = "Index" }); //Add Product
+                routes.MapRoute("BasketAdd", "add-basket", new { controller = "Basket", action = "AddBasket" }); //Add Product
             });
 
         }

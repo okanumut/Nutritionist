@@ -6,32 +6,36 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using Nutritionist.Client;
+using Nutritionist.Entity.Concrete;
 using Nutritionist.Repository.UnitOfWork;
 
 namespace Nutritionist.UI.Controllers
 {
-    public class LogInController : Controller
-    { 
+    public class LoginController : Controller
+    {
         UnitOfWork _unitOfWork = new UnitOfWork();
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Login(string Email, string Password)
+
+        //Register
+        public IActionResult Login(string UserName, string Password, string Email, string UserType)
         {
             try
             {
-                var UserCheck = _unitOfWork.LoginUsers.Find(x => x.Email == Email && x.Password == Password);
-                  
-
-                if (UserCheck != null)
+                tbl_LoginUsers _user = new tbl_LoginUsers
                 {
-                    Settings.cache.Set("UserName", UserCheck.UserName);
-                }
+                    UserName = UserName,
+                    Email = Email,
+                    Password = Password,
+                    UserType = UserType,
+                };
 
-                var status = new { operation = "Success" };
-                return Content(JsonConvert.SerializeObject(status), "application/json");
+                _unitOfWork.LoginUsers.Insert(_user);
+                _unitOfWork.Save();
             }
             catch (Exception)
             {
@@ -39,11 +43,48 @@ namespace Nutritionist.UI.Controllers
                 throw;
             }
 
-           
-
-
-
             return View();
+        }
+
+
+        //Login
+        public IActionResult ReallyLogin(string UserNameLog, string PasswordLog)
+        {
+
+
+            try
+            {
+                var UserSuccess = _unitOfWork.LoginUsers.Find(x => x.UserName == UserNameLog && x.Password == PasswordLog);
+
+
+                if (UserSuccess != null)
+                {
+                    Settings.cache.Set("UserName", UserSuccess.UserName);
+                    Settings.cache.Set("UserType", UserSuccess.UserType);
+
+                    var status = new { operation = "Success" };
+
+                    return Content(JsonConvert.SerializeObject(status), "application/json");
+                }
+                else
+                {
+                    var status = new { operation = "Wrong" };
+
+                    return Content(JsonConvert.SerializeObject(status), "application/json");
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                var asd = e;
+                var status = new { operation = "Catch" };
+
+                return Content(JsonConvert.SerializeObject(status), "application/json");
+            }
+
+
+
         }
     }
 }

@@ -395,7 +395,6 @@ C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Nutritionist.UI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Nutritionist.UI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Razor\Views\Register\Register.cshtml.g.cs
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\DnsClient.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
@@ -406,7 +405,6 @@ C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Nutritionist.Repository.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Nutritionist.Repository.pdb
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Nutritionist.Entity.pdb
-C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Razor\Views\LogIn\Index.cshtml.g.cs
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -415,3 +413,7 @@ C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Nutritionist.Client.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\bin\Debug\netcoreapp3.1\Nutritionist.Client.pdb
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Razor\Views\AddList\Index.cshtml.g.cs
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Razor\Views\Start\Index.cshtml.g.cs
+C:\Users\ener-\source\repos\Nutritionist\Nutritionist.UI\obj\Debug\netcoreapp3.1\Razor\Views\Basket\Index.cshtml.g.cs

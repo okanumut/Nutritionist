@@ -10,9 +10,9 @@
 </style>
 <div class="login_left">
     <div class="loginlogo"></div>
-    <div class="question1 ha" style="margin-top:5px;">Members</div>
-    <div class="question2 ha" style="margin-top:5px;">Login</div>
-    <div class="login_text">Lorem Ipsum is simply dummy text of the printing and <b>typesetting</b> industry. Lorem Ipsum has.</div>
+    <div class="question1 ha" style="margin-top:5px; font-family:Arial, Helvetica, sans-serif;">Üye</div>
+    <div class="question2 ha" style="margin-top: 5px;color:#333333;font-family: Arial, Helvetica, sans-serif;">Girişi</div>
+    <div> </div>
 
     <div>
         <input type="text" id="UserNameLog" value="Username" onfocus="if(this.value=='Username')this.value=''" onblur="if(this.value=='')this.value='Username'" class="login_name" />
@@ -31,10 +31,10 @@
 
     <div style="clear:both;"></div>
     <div class="hbar">-</div>
-    <div class="italicblue"><a href="#">Forgot Password?</a></div>
+    <div class="italicblue"><a href="#">Şifrenizi mi unuttunuz?</a></div>
     <div style="clear:both;"></div>
     <div class="hbar">-</div>
-    <div class="italicblue"><a href="#">Forgot Username?</a></div>
+    <div class="italicblue"><a href="#"></a></div>
 </div>
 
 
@@ -42,8 +42,8 @@
 
 <div class="login_right">
     <div class="registerlogo"></div>
-    <div class="question1 ha" style="margin-top:5px;">Kayıt Ol</div>
-    <div class="question2 ha" style="margin-top:5px;">Şimdi</div>
+    <div class="question1 ha" style="margin-top:5px; font-family:Arial, Helvetica, sans-serif">Kayıt </div>
+    <div class="question1 ha" style="margin-top: 5px; margin-left: 9px; font-family: Arial, Helvetica, sans-serif">Ol</div>
 
     <div>
         <input type="text" id="UserName" value="Username" onfocus="if(this.value=='Username')this.value=''" onblur="if(this.value=='')this.value='Username'" class="register_name" />
@@ -52,7 +52,7 @@
         <br />
         <input type="text" id="Email" value="Em@il" onfocus="if(this.value=='Em@il')this.value=''" onblur="if(this.value=='')this.value='Em@il'" class="register_password" />
         <br />
-        <div class="custom-select"  style="width:200px;">
+        <div class="custom-select"  style="width: 200px; color: #999999;">
             <select id="UserType">
                 <option value="0">Select Member Type:</option>
                 <option value="1">User</option>
@@ -68,8 +68,8 @@
     <div class="checkbox">
         <input type="checkbox" id="cb" name="box" />
     </div>
-    <div class="cbtext">Do you advice lorem?</div>
-    <div class="cbtextsmall">You should read <a href="#">equired</a> pisum lotus</div>
+    <div class="cbtext">I have read terms and conditions</div>
+    <div class="cbtextsmall"> <a href="#">terms and conditions</a> </div>
     <script src="~/js/Util/Util.js"></script>
     <script>
         $("#btnRegister").click(function () {
@@ -99,7 +99,7 @@
                 "UserNameLog": $("#UserNameLog").val(),
                 "PasswordLog": $("#PasswordLog").val()
             };
-            //logg
+  
 
 
             Util.Ajax.Generic("logg", data, "POST", "json", false, null, success, null, null);

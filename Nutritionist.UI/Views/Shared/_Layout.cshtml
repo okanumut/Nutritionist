@@ -58,13 +58,11 @@
 <body>
     <div id="header">
 
-        <!-- BEGIN  logo and slogan -->
-
         <br />
         <br />
         <br />
         <br />
-
+        
 
 
 
@@ -84,26 +82,22 @@
                     @if (Settings.cache.Get("UserType").ToString() == "1")
                     {
                         <button class="cool-button">@Settings.cache.Get("UserName")</button>
-                        <a href="/" id="SignOut" onclick="SignOnut()" class="btn-danger">Çıkıp Yap</a>
-                        <a href="basket" id="basket" class="btn-outline-secondary">Sepetim</a>
+                        <a href="/" id="SignOut" onclick="SignOnut()" class="btn-danger cool-button">Çıkıp Yap</a>
+                        <a href="basket" id="basket" class="btn-outline-secondary cool-button">Sepetim</a>
 
                     }
                     else
                     {
                         <button class="cool-button">@Settings.cache.Get("UserName")</button>
                         <button class="cool-button" onclick="location.href='add-product'">Ürün Ekle</button>
-                        <a href="/" id="SignOut" onclick="SignOnut()" class="btn-danger">Çıkıp Yap</a>
-                        <a href="basket" id="basket" class="btn-outline-secondary">Sepetim</a>
+                        <a href="/" id="SignOut" onclick="SignOnut()" class="btn-danger cool-button">Çıkıp Yap</a>
+                        <a href="basket" id="basket" class="btn-outline-secondary cool-button">Sepetim</a>
                     }
 
                 </div>
             </div>
 
         }
-
-        <!-- END  .header -->
-         
-
 
 
     </div>
@@ -122,18 +116,15 @@
         <div style="clear:both;"></div>
         <div class="horizontal_bar" style="margin:0; padding:14px 0 1px 0;"></div>
 
-        <!-- BEGIN  copyright  -->
+
         <div class="copyright" style=" position: fixed;
     bottom: 0px;
     left: 0px;
     width: 100%;
     height: 50px;
     padding:15px;
-    background-color: #000;">© 2019 <b>Ayca</b></div>
+    background-color: #000;">© 2020 <b>Ayça Ecem Gül</b></div>
 
-
-
-        <!-- END  #footer -->
     </div>
  
 

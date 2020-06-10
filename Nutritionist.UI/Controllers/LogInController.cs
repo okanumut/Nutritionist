@@ -11,7 +11,10 @@ using Nutritionist.Repository.UnitOfWork;
 
 namespace Nutritionist.UI.Controllers
 {
-    public class LoginController : Controller
+    public class 
+        
+        
+        Controller : Controller
     {
         UnitOfWork _unitOfWork = new UnitOfWork();
 

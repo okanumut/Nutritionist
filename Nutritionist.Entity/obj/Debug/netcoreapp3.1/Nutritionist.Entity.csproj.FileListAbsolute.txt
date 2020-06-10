@@ -6,3 +6,12 @@ C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreap
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Entity\bin\Debug\netcoreapp3.1\Nutritionist.Entity.pdb
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.dll
 C:\Users\ener-\source\repos\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.pdb
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\bin\Debug\netcoreapp3.1\Nutritionist.Entity.deps.json
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\bin\Debug\netcoreapp3.1\Nutritionist.Entity.dll
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\bin\Debug\netcoreapp3.1\Nutritionist.Entity.pdb
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.csprojAssemblyReference.cache
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.AssemblyInfoInputs.cache
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.AssemblyInfo.cs
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.csproj.CoreCompileInputs.cache
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.dll
+C:\Users\aycae\OneDrive\Belgeler\GitHub\Nutritionist\Nutritionist.Entity\obj\Debug\netcoreapp3.1\Nutritionist.Entity.pdb

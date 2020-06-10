@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj": {}
+    "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj": {
+    "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj",
+        "projectUniqueName": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj",
         "projectName": "Nutritionist.Client",
-        "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj",
-        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Client\\obj\\",
+        "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj",
+        "packagesPath": "C:\\Users\\aycae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\aycae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -57,27 +61,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj": {
+    "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj",
         "projectName": "Nutritionist.Entity",
-        "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj",
-        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Entity\\obj\\",
+        "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj",
+        "packagesPath": "C:\\Users\\aycae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Entity\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\aycae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -115,27 +129,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj": {
+    "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj",
         "projectName": "Nutritionist.Repository",
-        "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj",
-        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Repository\\obj\\",
+        "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj",
+        "packagesPath": "C:\\Users\\aycae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\aycae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -147,8 +171,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj": {
-                "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj"
+              "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj": {
+                "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Entity\\Nutritionist.Entity.csproj"
               }
             }
           }
@@ -171,27 +195,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj": {
+    "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj",
+        "projectUniqueName": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj",
         "projectName": "Nutritionist.UI",
-        "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj",
-        "packagesPath": "C:\\Users\\ener-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.UI\\obj\\",
+        "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.UI\\Nutritionist.UI.csproj",
+        "packagesPath": "C:\\Users\\aycae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.UI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ener-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\aycae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -203,11 +237,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj": {
-                "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj"
+              "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj": {
+                "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Client\\Nutritionist.Client.csproj"
               },
-              "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj": {
-                "projectPath": "C:\\Users\\ener-\\source\\repos\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj"
+              "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj": {
+                "projectPath": "C:\\Users\\aycae\\OneDrive\\Belgeler\\GitHub\\Nutritionist\\Nutritionist.Repository\\Nutritionist.Repository.csproj"
               }
             }
           }
@@ -266,6 +300,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -274,7 +314,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

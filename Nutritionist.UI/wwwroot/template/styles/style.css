@@ -1,13 +1,12 @@
-﻿@charset "utf-8";/*
-Theme Name: Basico
-Description: Premium HTML E-commerce Theme
-Author: Aldema Studio & Just 8D
-Author URI:http://themeforest.net/user/DeboraLuisaA
-Version: 1.0
-*/
+﻿@charset "utf-8";
+
 
 html, body {
 	height:100%;
+}
+
+h1 {
+	padding-left: 32px;
 }
 body {
 	top:0px;
@@ -146,7 +145,7 @@ img {
 	margin-bottom:0px;
 }
 #headeright {
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:13px;
 	padding-top:0px;
 	margin-right:auto;
@@ -206,15 +205,16 @@ img {
 	height:11px;
 }
 .login {
-	float:left;
-	padding:11px 0px 0px 0px;
-	margin:0px 0px 0px 0px;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	padding: 20px 0px 20px 750px;
 }
 .login a {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:11px;
-	color:#f7f7f7;
-	text-decoration:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #f7f7f7;
+	text-decoration: none;
+	padding: 20px 0px 20px 750px;
 }
 .login a:hover {
 	text-decoration:underline;
@@ -287,7 +287,7 @@ img {
 	position:relative;
 	width:932px;
 	height:41px;
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:21px;
 	margin:0px 0px 22px 0px;
 	clear:both;
@@ -731,15 +731,7 @@ ul#category_menu {
 	margin:16px 0px 0px 4px;
 	float:left;
 }
-.newslettertext a {
-	padding:0px 4px 0px 4px;
-}
-.newslettertext a {
-	color:#218CD3;
-}
-.newslettertext a:hover {
-	text-decoration:none;
-}
+
 .nws_form {
 	background-color:#F9F9F9;
 	height:87px;
@@ -820,18 +812,20 @@ ul#category_menu {
 	position:relative;
 }
 .question1 {
-	float:left;
-	margin:-1px 0px 3px 0px;
-	padding:0px;
-	color:#333333;
-	word-spacing:-10px;
+	float: left;
+	margin: -1px 0px 3px 0px;
+	padding: 0px;
+	color: #333333;
+	word-spacing: -10px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 .question2 {
-	color:#999999;
-	float:left;
-	margin:-1px 0px 0px 0px;
-	padding:0px 7px 3px 7px;
-	word-spacing:-10px;
+	color: #999999;
+	float: left;
+	margin: -1px 0px 0px 0px;
+	padding: 0px 7px 3px 7px;
+	word-spacing: -10px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 .slogan {
 	font-size:12px;
@@ -931,12 +925,12 @@ ul#category_menu {
 	float:left;
 }
 .product_text {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-	color:#818181;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #2ECC71;
 	padding: 0px 18px 0px 14px;
-	line-height:23px;
-	clear:both;
+	line-height: 23px;
+	clear: both;
 }
 .price {
 	width:202px;
@@ -944,7 +938,7 @@ ul#category_menu {
 	margin:1px 0px 0px 0px;
 	font-size:16px;
 	font-family:Arial, Helvetica, sans-serif;
-	color:#218CD3;
+	color:#2ECC71;
 	clear:both;
 }
 .price_sale_block {
@@ -1168,56 +1162,9 @@ a .page1:hover, a .page2:hover, a .page3:hover, a .page4:hover, a .page5:hover, 
 	line-height:23px;
 !important;
 }
-.footer_twitter {
-	float:left;
-	width:300px;
-	margin:0 0 22px 0;
-	padding:0 41px 0px 0;
-	line-height:23px;
-!important;
-	max-height:168px;
-	overflow:hidden;
-}
-.footer_twitter ul {
-	list-style:none;
-	margin:0 0 0 0;
-	padding:0;
-}
-.footer_twitter li {
-	margin: 0 0 12px 0;
-	padding: 0 0 0 32px;
-	background: url(Images/footer_quotes.jpg) no-repeat 0px 7px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-	color:#818181;
-	font-style:italic;
-}
-.footer_twitter li span {
-	display:block;
-	margin:0;
-	padding:0;
-}
-.footer_twitter li span a {
-	text-decoration:none;
-	color:#218CD3;
-}
-.footer_twitter li span a:hover {
-	text-decoration:underline;
-}
-.footer_twitter li a {
-	text-decoration:none;
-	font-family:Arial, Helvetica, sans-serif;
-	color:#999;
-	font-style:normal;
-}
-.footer_facebook {
-	float:left;
-	width:300px;
-	padding:0;
-}
-.footer_facebook .boxcontainer {
-	padding:7px 0 0 0;
-}
+
+
+
 .footer_thumb_left {
 	margin:7px 10px 0 0;
 	padding:0;
@@ -1354,10 +1301,6 @@ ul#footer_menu li {
 	display:block;
 	margin:0;
 	padding:0;
-	
-	
-
-
 	
 }
 
@@ -1706,7 +1649,7 @@ ul#category_menu2 {
 	padding:0px;
 }
 a.featured_text {
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:23px;
 	color:#333333;
 	text-decoration:none;
@@ -1786,7 +1729,7 @@ li.divisory_bar {
 	background:url(Images/divisory_bar.jpg) center no-repeat;
 }
 a.information_text {
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:23px;
 	color:#333333;
 	text-decoration:none;
@@ -1827,7 +1770,7 @@ ul.information {
 	padding:0px;
 }
 a.socials_text {
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:23px;
 	color:#333333;
 	text-decoration:none;
@@ -2332,7 +2275,7 @@ text-decoration:underline;}
   float: left;
   height: 43px;  margin: 0 0 0 -10px;
 text-decoration:none;
-      font-family: Kartika;
+      font-family: Arial, Helvetica, sans-serif;
     font-size: 19px;
     font-weight: normal;
 }
@@ -2469,7 +2412,7 @@ margin:0 0 33px 0;
 	padding:3px 0 0 0;
 }
 a.support_text {
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:23px;
 	color:#333333;
 	text-decoration:none;
@@ -2956,25 +2899,27 @@ table.style2.contact {
 /*-----------------------------------------------------------------------------------*/
 
 
-.login_left {
-	float:left;
-	width:321px;
-	border-right:1px solid #F0EEEE;
-	height:371px;
-	margin:6px 67px -11px 13px;
+
+_left {
+	float: left;
+	width: 321px;
+	border-right: 1px solid #F0EEEE;
+	height: 371px;
+	margin: 50px 50px 50px 150px;
 }
 .loginlogo {
-	float:left;
-	margin:11px 12px 0px 0px;
-	background:url(Images/loginlogo.png);
-	background-repeat:no-repeat;
-	width:17px;
-	height:15px;
+	float: left;
+	margin: 11px 12px 0px 0px;
+	padding: 20px 0px 20px 750px;
+	background: url(Images/loginlogo.png);
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 15px;
 }
 .login_right {
-	float:left;
-	font-family:Arial, Helvetica, sans-serif;
-	margin:6px 0px 0px 0px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 50px 50px 50px 150px;
 }
 .login_text {
 	font-family:Arial, Helvetica, sans-serif;
@@ -3148,9 +3093,9 @@ table.style2.contact {
 /*-----------------------------------------------------------------------------------*/
 
 .ha {
-	font-size:29px;
-	font-family:Kartika;
-	font-weight:normal;
+	font-size: 29px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
 }
 .hb {
 	font-family:Arial, Helvetica, sans-serif;
@@ -3158,26 +3103,26 @@ table.style2.contact {
 	font-weight:normal;
 }
 .hc {
-	font-family:Kartika;
-	font-size:23px;
-	color:#333333;
-	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 23px;
+	color: #333333;
+	font-weight: normal;
 }
 .hc a {
 	color:#333333;
 }
 .hd {
-	font-family:Utsaah;
-	font-size:21px;
-	color:#333333;
-	font-weight:normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	color: #333333;
+	font-weight: normal;
 }
 .hd a {
 	color:#333333;
 }
 .he {
 	font-size:27px;
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
 }
 .ptitle {
@@ -3652,120 +3597,8 @@ form div.variation1 label{display:block;line-height:26px;}
 /* second variation (LABEL is placed on the left of the SELECT) */	
 form div.variation2 label{float:left;width:100px;line-height:26px;}
 form div.variation2 span.select{left:100px;}
-/*-----------------------------------------------------------------------------------*/
-/*	9.	Blog
-/*-----------------------------------------------------------------------------------*/
-
-.blog_posts {
-	float:left;
-	font:12px Arial, Helvetica, sans-serif;
-	padding:0;
-	margin:16px 0 0 3px;
-	width:694px;
-}
-.blog_right, .blog_left {
-	float:left;
-}
-.blog_left {
-	width:227px;
-}
-.blog_right {
-	width:467px;
-}
-.blog_images_border {
-	border:12px solid #f3f3f3;
-	margin:0px 0px 0px 0px;
-}
-a:hover .blog_images_border {
-	border:12px solid #d8d8d6;
-}
-.blog_zoom {
-	margin-top:65px;
-	margin-left:74px;
-	position:absolute;
-}
-.posts_title {
-	font-size:22px;
-	color:#454545;
-	padding:0px 0 0px 0;
-	margin:-6px 0 0px 0;
-	float:left;
-	width:319px;
-	line-height:29px;
-}
-.post_details {
-	heigh:27px;
-	background-color:#FBFBFB;
-	line-height:27px;
-	color:#666;
-	clear:both;
-	margin:0px 0 12px 1px;
-	padding:0 7px 0 7px;
-	display:inline-block;
-}
-.blog_right a {
-	color:#218CD3;
-	text-decoration:none;
-}
-.blog_right a:hover {
-	text-decoration:underline;
-}
-.blog_left a {
-	color:#666;
-	font-size:12px;
-	text-decoration:none;
-	font-style:italic;
-}
-.tags_thumb {
-	text-align:center;
-	width:194px;
-	display:block;
-	margin:10px 0 0 0;
-	padding:0px;
-}
-.blog_left a:hover {
-	text-decoration:underline;
-	color:#333;
-}
-.blog_text {
-	font-size:14px;
-	color:#999;
-	line-height:26px;
-}
-.widget {
-	float:right;
-}
-.posts_title a {
-	color:#454545;
-	text-decoration:none;
-}
-.posts_title a:hover {
-	color:#218CD3;
-	text-decoration:none;
-}
-/*-----------------------------------------------------------------------------------*/
-/*	10.	Faq Page
-/*-----------------------------------------------------------------------------------*/
 
 
-
-.faq {
-	float:left;
-	font:14px Arial, Helvetica, sans-serif;
-	margin:0;
-	padding:0;
-}
-.faq_title {
-	color:#666;
-	font-weight:bold;
-	font-style:italic;
-}
-.faq_text {
-	color:#999;
-	line-height:26px;
-	margin:0;
-	padding:4px 0 0 0;
-}
 /*-----------------------------------------------------------------------------------*/
 /*	11. Account Page
 /*-----------------------------------------------------------------------------------*/
@@ -3802,7 +3635,7 @@ a:hover .blog_images_border {
 	margin:0px 12px 0 0px;
 }
 .hs {
-	font-family:Kartika;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size:29px;
 	color:#333333;
 	font-weight:normal;
@@ -3862,53 +3695,9 @@ a:hover .blog_images_border {
 .back:hover {
 	color:#218CD3;
 }
-/*-----------------------------------------------------------------------------------*/
-/*	13. Wish List Page
-/*-----------------------------------------------------------------------------------*/	
 
-.wish_text {
-	font:14px Arial, Helvetica, sans-serif;
-	color:#666;
-	line-height:18px;
-	padding:0 0 1px 0;
-}
-.wish_tab {
-	width:934px;
-	text-align:center;
-	clear:both;
-	margin:0px 0px 0px 0px;
-	padding:35px 0px 24px 0px;
-	font-family:Arial, Helvetica, sans-serif;
-}
-.wish_tab th {
-	padding:0px 10px 0px 10px;
-	height:38px;
-	border-bottom:1px solid #F2F2F2;
-	line-height:38px;
-}
-.wish_header {
-	background-color:#f2f2f2;
-	font-size:12px;
-	color:#333333;
-	font-weight:bold;
-	text-shadow: #ffffff 0px 1px 0px;
-}
-.wish_tab td {
-	color:#999999;
-	font-size:14px;
-	height:80px;
-	line-height:80px;
-	border-bottom:1px solid #F2F2F2;
-	margin:0px;
-	padding:0px;
-}
-.wish_tab td a {
-	color:#218CD3;
-	text-decoration:none;
-}
-.wish_tab td a:hover {
-	text-decoration:underline;
-}
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	14. Logged Page
 /*-----------------------------------------------------------------------------------*/	
@@ -4037,5 +3826,3 @@ margin:-1px 0 0 -1px;}
 
 
 :focus{outline:none;}
-
-

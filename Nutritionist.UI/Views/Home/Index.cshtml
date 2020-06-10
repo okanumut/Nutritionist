@@ -127,7 +127,7 @@
                 <h4 class="modal-title">Ödeme İşlemi</h4>
             </div>
             <div class="modal-body">
-                <p>Diyet Listesini Yöntem İle Alacaksınız ? </p>
+                <p>Diyet Listesini Hangi Yöntem İle Alacaksınız ? </p>
 
                 <p>
                     <input type="radio" name="radio1" onclick="Show_Div('#Div_1')" class="cb1">Kredi Kartı
@@ -188,7 +188,7 @@
     <br />
     <br /><br />
     <br />
-    <div class="question1 ha">ÜRÜNLER</div>
+    <div class="question1 ha" style="font-family: Arial, Helvetica, sans-serif;margin-left: 350px;">DİYETLERİMİZ</div>
     <div style="clear:both;"></div>
     <br />
     <br />
@@ -205,41 +205,42 @@
                 <input id="inputID" value="@Settings.cache.Set(item._id.ToString(), item._id);" />
             </div>
 
-            <!-- BEGIN product1 -->
-            <div class="item">
-                <div class="item_up">
-                    <a href="product-page.html" class="ptitle2 product_title1">@item.Name</a>
+
+            <div class="item" style="padding-left:20px; padding-right:20px;">
+                <div class="
+                     _up">
+                    <a href="product-page.html" style="font-size: 20px;" class="ptitle2 product_title1">@item.Name</a>
                     <br />
                     <div class="ptitle2 product_title2">@item.Author</div>
                     <br />
-                     
 
+                    <div class="price">@item.Detail</div>
                     <div class="product_text">
                         @item.Meal
                     </div>
-                    <div class="price">@item.Detail</div>
+
                 </div>
 
 
                 @if (data == "admin")
                 {
-                    <a href="#" data-id='@item._id' id='ProductDeleteSelect_@(item._id)' class="delete-link">Ürünü Sil</a>
+                    <a href="#" data-id='@item._id' id='ProductDeleteSelect_@(item._id)' class="delete-link" style="font-size: 10px;margin: 50px;color: #2ECC71;">Ürünü Sil</a>
                 }
 
 
 
-                <!-- Trigger the modal with a button -->
+
                 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Hemen Satın Al</button>
                 <br />
                 <br />
                 <br />
 
-                <a href="#" data-id='@item._id' id='ProductSelect_@(item._id)' class="select-link">Sepete Ekle</a>
+                <a href="#" style="color: #2ECC71;" '@item._id' id='ProductSelect_@(item._id)' class="select-link">Sepete Ekle</a>
 
-                <!-- END product1 -->
+
             </div>
 
-            <!-- END central products -->
+
         </div>
 
     }
@@ -247,7 +248,7 @@
 
 
 
-<script src="~/js/Util/Util.js"></script> 
+    <script src="~/js/Util/Util.js"></script>
 
     <script>
         $('.select-link').click(function () {
